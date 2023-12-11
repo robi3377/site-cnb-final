@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+APScheduler==3.10.1
+=======
+>>>>>>> 2c395e77ad1deb0f0e5e1bc070a6512ea23e31d9
+asgiref==3.6.0
+Django==4.2.1
+et-xmlfile==1.1.0
+numpy==1.24.3
+openpyxl==3.1.2
+pandas==2.0.1
+Pillow==9.5.0
+python-dateutil==2.8.2
+<<<<<<< HEAD
+python-decouple==3.8
+=======
+>>>>>>> 2c395e77ad1deb0f0e5e1bc070a6512ea23e31d9
+pytz==2023.3
+six==1.16.0
+sqlparse==0.4.4
+tzdata==2023.3
+<<<<<<< HEAD
+tzlocal==5.0.1
+=======
+>>>>>>> 2c395e77ad1deb0f0e5e1bc070a6512ea23e31d9

@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{%block title%}
+<title>{{nume}}</title>
+{%endblock title%}
+
+
+{% block content %}
+<!-- <div class="pt-16">
+    <div class="relative flex flex-col w-[100vw] h-[20vw] bg-cover bg-no-repeat bg-center" style="background-image:url({{proiect.emblema.url}});"></div>
+        <h1 class="font-noto text-3xl font-semibold text-[#123]">TEst</h1>
+        
+    </div>
+</div> -->
+
+<div class="bg-cover bg-center bg-no-repeat pt-20 -z-10 h-64" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/colegiul_banatean.jpg)"> </div>
+    <div class="w-[100vw] bg-[#F4F4F9] text-base pt-2 -z-5 flex flex-col items-center">
+        
+        
+        <div class="md:w-[80vw] w-[90vw]">
+            
+            <div class="w-[100%] min-h-[70vh] font-noto text-3xl font-semibold my-10 flex flex-col items-center">
+                <h1>{{nume}}</h1> 
+                {% for componenta in componente %}
+
+                <div class="w-[100vw] flex items-center justify-center">
+                    <div class="md:w-[80vw] w-[90vw] min-h-[10vh] mt-4">
+                      <h1 class="font-noto md:text-3xl text-2xl text-[#762424] pt-4">
+                        {{componenta.subtitlu}}
+                      </h1>
+                      <p class="indent-8 md:text-xl text-lg pb-4">
+                        {{componenta.paragraf}}
+                      </p>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+                <div class="md:w-[80vw] w-[90vw] font-roboto text-lg font-extralight mt-10 grid md:grid-cols-2 grid-cols-1 gap-10">
+
+<<<<<<< HEAD
+                    {% for doc in documente %}
+                    <div class="flex gap-3 items-center">
+                        <a href="{{doc.document.url}}" target="_blank" class="w-[85px] h-[100px] shadow-xl rounded-xl bg-cover bg-center" style="background-image: url(https://img.freepik.com/icones-gratuites/pdf_318-187733.jpg);">
+                        </a>
+                        <a href="{{doc.document.url}}" target="_blank" >{{doc.nume}}</a>
+=======
+                    {% for doc, nume in documente %}
+                    <div class="flex gap-3 items-center">
+                        <a href="{{doc.document.url}}" target="_blank" class="w-[85px] h-[100px] shadow-xl rounded-xl bg-cover bg-center" style="background-image: url(https://img.freepik.com/icones-gratuites/pdf_318-187733.jpg);">
+                        </a>
+                        <a href="{{doc.document.url}}" target="_blank" >{{nume}}</a>
+>>>>>>> 2c395e77ad1deb0f0e5e1bc070a6512ea23e31d9
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+<<<<<<< HEAD
+        <div class="relative pt-12 pb-32 flex justify-center items-center">
+            <div class=" justify-center galery gap-6">
+                {% for poza in poze %}
+                {{poza | safe}}
+                {% endfor %}
+                <!-- <button onclick="openImage({contor})" class="col-span-2 row-span-2">
+                            <div id="bgimage{contor}" onclick="openImagePhone({contor})" onmouseleave="lightup({contor})" onmouseover="darken({contor})" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 w-full h-full" style="background-image: url({poza.poza.url}); overflow: hidden;">
+                            <div id="container{contor}" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+                    </div>
+                </div>
+                </button>
+        <button onclick="openImage({contor})" class="row-span-2">
+                            <div id="bgimage{contor}" onclick="openImagePhone({contor})" onmouseleave="lightup({contor})" onmouseover="darken({contor})" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 w-full h-full" style="background-image: url({poza.poza.url}); overflow: hidden;">
+                            <div id="container{contor}" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                    </svg>
+                            </div>
+                     </div>
+                     </button>
+     <button onclick="openImage({contor})">
+        <div id="bgimage{contor}" onclick="openImagePhone({contor})" onmouseleave="lightup({contor})" onmouseover="darken({contor})" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 w-full h-full" style="background-image: url({poza.poza.url}); overflow: hidden;">
+        <div id="container{contor}" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+        </div>
+    </div>
+    </button> -->
+            </div>
+        </div>
+        <div class="w-screen flex justify-center items-center">
+            <div class="w-[80vw] flex flex-wrap justify-center items-center gap-4 mb-10">
+                {% for video in videouri %}
+                <div class="w-[350px] h-[200px] rounded-2xl overflow-hidden">
+                    <video id="vid" src="/assets/{{video.poza}}" class="" controls preload="metadata">
+                    </video>
+                </div>
+                {% endfor %}
+            </div>
+          </div>
+    
+        <div id="openImage" class="z-10 w-[100vw] h-[calc(100vh-4rem)] top-16 translate-x-[100vw] flex justify-center items-center fixed bg-opacity-70 bg-black duration-500">
+            <button onclick="closeImage()" class="z-30 absolute top-0 left-2 h-12 w-12">
+                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg> 
+            </button>
+            <a id="downloadImage" class="z-30 absolute top-0 right-2 h-12 w-12" href="" download="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+            </a>  
+            <div class="relative w-full h-[60vh] flex justify-center items-center">
+                <img id="openedImage" src="" alt="" class="z-[100] object-contain md:max-w-[80vw] md:max-h-[80vh] max-w-[90vw] max-h-[80vh]">
+            </div>    
+        </div>
+=======
+>>>>>>> 2c395e77ad1deb0f0e5e1bc070a6512ea23e31d9
+    </div>
+</div>
+{% endblock content %}

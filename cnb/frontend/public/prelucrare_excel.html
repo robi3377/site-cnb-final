@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Creare proiect</title>
+{% endblock title %}
+
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<<<<<<< HEAD
+<div class="w-[100vw] grid grid-cols-2 pt-[80px]">
+=======
+<div class="w-[100vw] min-h-[100vh] grid grid-cols-2 pt-[80px]">
+>>>>>>> 2c395e77ad1deb0f0e5e1bc070a6512ea23e31d9
+    <form class="flex flex-col items-center gap-4" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input class="absolute left-[calc(50%-225px)] p-4 border-2 rounded-3xl flex justify-center items-center" type="file" name="intake">
+
+        <button class="absolute right-[calc(50%-181px)] p-4 border-2 rounded-3xl flex justify-center items-center" type="submit">Creare</button>
+    </form>
+<<<<<<< HEAD
+</div>
+    <div class="pt-32 text-2xl flex justify-center items-center">
+        <div>
+        <b>Model excel pentru prelucrarea corecta a datelor:</b>
+        <br>
+        <b>Coloana A nu se va lua în considerare, dar trebuie să existe deoarece datele se citesc începând cu coloana B</b>
+        <br>
+        <b>Pe coloana B trebuie să fie clasa și litera scrise în felul următor "clasa_litera", la pregătitoare se scrie "preg._litera", la liceu se va scrie "clasa_profil+nr"</b>
+        <br>
+        <b>Pe coloana C trenuie să fie numele dirigintelui sau a profesorului</b>
+        <br>
+        <b>Pe coloana D trebuie să fie sala</b>
+        <br>
+        <b>Ce se află după coloana D nu se mai ia în considerare</b>
+        <br>
+        <br>
+        <br>
+        <br>
+        <center>Exemplu:</center>
+        </div>
+    </div>
+    <div class="py-24 flex justify-center items-center">
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">A</th>
+                    <th class="px-4 py-2">B</th>
+                    <th class="px-4 py-2">C</th>
+                    <th class="px-4 py-2">D</th>
+                    <th class="px-4 py-2">E+</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border px-4 py-2">ID 1 / irelevant </td>
+                    <td class="border px-4 py-2">Preg._A</td>
+                    <td class="border px-4 py-2">GHIMBĂŞANU SONIA</td>
+                    <td class="border px-4 py-2">P2</td>
+                    <td class="border px-4 py-2">Irelevant</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">...</td>
+                    <td class="border px-4 py-2">...</td>
+                    <td class="border px-4 py-2">...</td>
+                    <td class="border px-4 py-2">...</td>
+                    <td class="border px-4 py-2">...</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">ID Nd / irelevant </td>
+                    <td class="border px-4 py-2">VIII_A</td>
+                    <td class="border px-4 py-2">SĂHLEANU CRISTIAN</td>
+                    <td class="border px-4 py-2">A007</td>
+                    <td class="border px-4 py-2">Irelevant</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">...</td>
+                    <td class="border px-4 py-2">...</td>
+                    <td class="border px-4 py-2">...</td>
+                    <td class="border px-4 py-2">...</td>
+                    <td class="border px-4 py-2">...</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">ID N / irelevant </td>
+                    <td class="border px-4 py-2">XII_MI2</td>
+                    <td class="border px-4 py-2">DRAGU FELICIA</td>
+                    <td class="border px-4 py-2">A220</td>
+                    <td class="border px-4 py-2">Irelevant</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+=======
+    
+</div>
+>>>>>>> 2c395e77ad1deb0f0e5e1bc070a6512ea23e31d9
+<script src="./static/test.js"></script>
+
+{% endblock content %}
